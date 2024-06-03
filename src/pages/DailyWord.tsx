@@ -32,7 +32,7 @@ const DailyWord: FC = () => {
       <Text fontSize={24} fontWeight="bold" textAlign="center" mt={8}>
         <Text display="inline-block" fontWeight="bold">
           Day {wordData.day}
-        </Text>{" "}
+        </Text>
         - {wordData.title}
       </Text>
       <Accordion mt={8} allowMultiple>
