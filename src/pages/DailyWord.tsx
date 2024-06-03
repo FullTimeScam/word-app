@@ -11,12 +11,10 @@ import {
 } from "@chakra-ui/react";
 import { FC, useEffect } from "react";
 import { FiVolume2 } from "react-icons/fi";
-import { useParams, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const DailyWord: FC = () => {
   const navigate = useNavigate();
-
-  const { day } = useParams();
 
   const { state } = useLocation();
   const { wordData }: { wordData: IWords } = state;
