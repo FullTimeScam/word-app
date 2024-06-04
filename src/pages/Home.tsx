@@ -21,7 +21,11 @@ const Home: FC = () => {
         mt={8}
         textColor={"white"}
       >
-        워드-앱
+        <div style={{ fontSize: "20px" }}>혁명의 도구, 글쓰기의 보물!</div>
+        <div style={{ fontSize: "20px" }}>
+          자주성과 창조성을 심어주는 위대한
+        </div>
+        워드-프로그램!
       </Text>
       <Flex flexDir="column" mt={8} gap={4} px={4} textColor={"white"}>
         {sampleData.map((v: IWords) => (
