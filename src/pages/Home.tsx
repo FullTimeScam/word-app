@@ -33,7 +33,7 @@ const Home: FC = () => {
             key={v.day}
             variant="outline"
             textColor={"white"}
-            colorScheme="green"
+            colorScheme="purple"
             justifyContent="start"
             isTruncated={true}
             onClick={() =>

@@ -29,7 +29,7 @@ const DailyWord: FC = () => {
       maxW={768}
       mx="auto"
       minH="100vh"
-      backgroundColor={"blue"}
+      backgroundColor={"purple"}
     >
       <Button
         m={4}
