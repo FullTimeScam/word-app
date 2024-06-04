@@ -15,7 +15,7 @@ const AnotherDailyWord: FC = () => {
   const onClickAudio = async () => {
     try {
       const response = await axios.post(
-        `https://texttospeech.googleapis.com/v1/text:${
+        `https://texttospeech.googleapis.com/v1/text:synthesize?key=${
           import.meta.env.VITE_API_KEY
         }`,
         {
