@@ -1,10 +1,18 @@
 import { Button, Flex, Text } from "@chakra-ui/react";
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import sampleData from "../assets/sampleData.json";
 
 const Home: FC = () => {
   const navigate = useNavigate();
+  const [asciiArt, setAsciiArt] = useState("");
+
+  useEffect(() => {
+    fetch("/ascii_art.txt")
+      .then((response) => response.text())
+      .then((data) => setAsciiArt(data))
+      .catch((error) => console.error("Error fetching ASCII art:", error));
+  }, []);
 
   return (
     <Flex
@@ -26,6 +34,15 @@ const Home: FC = () => {
           자주성과 창조성을 심어주는 위대한
         </div>
         워드-프로그램!
+      </Text>
+      <Text
+        fontFamily="monospace"
+        whiteSpace="pre"
+        textAlign="center"
+        mt={8}
+        textColor={"white"}
+      >
+        {asciiArt}
       </Text>
       <Flex flexDir="column" mt={8} gap={4} px={4} textColor={"white"}>
         {sampleData.map((v: IWords) => (
