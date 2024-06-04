@@ -38,7 +38,7 @@ const DailyWord: FC = () => {
         colorScheme="transparent"
         onClick={() => navigate("/")}
       >
-        <FiArrowLeft />
+        <FiArrowLeft color="white" />
       </Button>
       <Flex
         textColor={"white"}
