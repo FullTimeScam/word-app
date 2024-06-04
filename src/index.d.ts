@@ -1,8 +1,10 @@
 interface IWords {
   day: number;
   title: string;
-  sentences: {
-    english: string;
-    korean: string;
-  }[];
+}
+
+interface ISentences {
+  english: string;
+  korean: string;
+  sentences: ISentence[];
 }
