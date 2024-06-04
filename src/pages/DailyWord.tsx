@@ -1,4 +1,4 @@
-import { Accordion, Button, Flex, Text } from "@chakra-ui/react";
+import { Accordion, Button, Flex } from "@chakra-ui/react";
 import { FC, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
