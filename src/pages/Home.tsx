@@ -6,12 +6,23 @@ import sampleData from "../assets/sampleData.json";
 const Home: FC = () => {
   const navigate = useNavigate();
   const [asciiArt, setAsciiArt] = useState("");
+  const [position, setPosition] = useState(0);
 
   useEffect(() => {
     fetch("/ascii_art.txt")
       .then((response) => response.text())
       .then((data) => setAsciiArt(data))
       .catch((error) => console.error("Error fetching ASCII art:", error));
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPosition((prevPosition) =>
+        prevPosition < 100 ? prevPosition - 1 : 0
+      );
+    }, 100);
+
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -41,6 +52,7 @@ const Home: FC = () => {
         textAlign="center"
         mt={8}
         textColor={"white"}
+        style={{ transform: `translateX(${position}px)` }}
       >
         {asciiArt}
       </Text>
@@ -84,7 +96,7 @@ const Home: FC = () => {
           >
             <Text textColor={"white"} fontWeight="bold">
               Day {v.day}
-            </Text>{" "}
+            </Text>
             - {v.title}
           </Button>
         ))}
