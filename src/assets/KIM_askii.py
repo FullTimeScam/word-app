@@ -16,7 +16,7 @@ def image_to_ascii(image_path, output_width=100):
     image_array = np.array(image)
 
     # Define ASCII characters
-    ascii_chars = "@%#*+=-:. "
+    ascii_chars = "@%#*+=-:.oO0 "
 
     # Normalize image array to the range of ASCII characters
     normalized_array = (image_array / 255) * (len(ascii_chars) - 1)
