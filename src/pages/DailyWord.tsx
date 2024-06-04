@@ -23,11 +23,13 @@ const DailyWord: FC = () => {
 
   return (
     <Flex
+      textColor={"white"}
       position="relative"
       flexDir="column"
       maxW={768}
       mx="auto"
       minH="100vh"
+      backgroundColor={"blue"}
     >
       <Button
         m={4}
@@ -39,6 +41,7 @@ const DailyWord: FC = () => {
         <FiArrowLeft />
       </Button>
       <Flex
+        textColor={"white"}
         fontSize={24}
         fontWeight="bold"
         textAlign="center"

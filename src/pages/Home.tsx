@@ -7,15 +7,28 @@ const Home: FC = () => {
   const navigate = useNavigate();
 
   return (
-    <Flex flexDir="column" maxW={768} mx="auto" minH="100vh">
-      <Text fontSize={48} fontWeight="bold" textAlign="center" mt={8}>
-        Word App
+    <Flex
+      flexDir="column"
+      maxW={768}
+      mx="auto"
+      minH="100vh"
+      backgroundColor={"blue"}
+    >
+      <Text
+        fontSize={48}
+        fontWeight="bold"
+        textAlign="center"
+        mt={8}
+        textColor={"white"}
+      >
+        워드-앱
       </Text>
-      <Flex flexDir="column" mt={8} gap={4} px={4}>
+      <Flex flexDir="column" mt={8} gap={4} px={4} textColor={"white"}>
         {sampleData.map((v: IWords) => (
           <Button
             key={v.day}
             variant="outline"
+            textColor={"white"}
             colorScheme="green"
             justifyContent="start"
             isTruncated={true}
@@ -35,6 +48,7 @@ const Home: FC = () => {
         {sampleData.map((v: IWords) => (
           <Button
             key={v.day}
+            textColor={"white"}
             variant="outline"
             colorScheme="green"
             justifyContent="start"
@@ -47,7 +61,10 @@ const Home: FC = () => {
               })
             }
           >
-            <Text fontWeight="bold">Day {v.day}</Text> - {v.title}
+            <Text textColor={"white"} fontWeight="bold">
+              Day {v.day}
+            </Text>{" "}
+            - {v.title}
           </Button>
         ))}
       </Flex>

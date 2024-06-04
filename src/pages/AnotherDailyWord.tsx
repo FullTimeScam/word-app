@@ -85,11 +85,13 @@ const AnotherDailyWord: FC = () => {
 
   return (
     <Flex
+      textColor={"white"}
       position="relative"
       flexDir="column"
       maxW={768}
       mx="auto"
       minH="100vh"
+      backgroundColor={"blue"}
     >
       <Button
         m={4}
@@ -109,10 +111,10 @@ const AnotherDailyWord: FC = () => {
       >
         Day {state.wordData.day} - {state.wordData.title}
       </Flex>
-      <Flex mt={8} flexDirection="column" px={4}>
+      <Flex mt={8} flexDirection="column" px={4} textColor={"white"}>
         <Text>{state.wordData.sentences[currentSentenceNumber]?.english}</Text>
         <Text
-          bgColor={isClicked ? "" : "black"}
+          bgColor={isClicked ? "" : "white"}
           mt={2}
           cursor="pointer"
           onClick={() => setIsClicked(!isClicked)}
